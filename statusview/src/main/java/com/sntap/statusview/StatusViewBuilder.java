@@ -141,6 +141,7 @@ public class StatusViewBuilder {
         this.loadingTip = builder.loadingTip;
         this.emptyTip = builder.emptyTip;
         this.errorTip = builder.errorTip;
+        this.loginTip = builder.loginTip;
         this.tipColor = builder.tipColor;
         this.tipSize = builder.tipSize;
         this.emptyIcon = builder.emptyIcon;
