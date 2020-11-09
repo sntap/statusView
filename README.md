@@ -122,3 +122,5 @@ statusView.showStatusView(int index)
 ```
 
 更多使用细节可参考demo！
+
+git push -u origin main
