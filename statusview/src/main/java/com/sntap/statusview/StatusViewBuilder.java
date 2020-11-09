@@ -163,6 +163,7 @@ public class StatusViewBuilder {
         private String loadingTip;
         private String emptyTip;
         private String errorTip;
+        private String loginTip;
         private int tipColor;
         private int tipSize;
 
@@ -197,6 +198,10 @@ public class StatusViewBuilder {
             return this;
         }
 
+        public Builder setLoginTip(String loginTip){
+            this.loginTip = loginTip;
+            return this;
+        }
         public Builder setTipColor(@ColorRes int tipColor) {
             this.tipColor = tipColor;
             return this;
