@@ -360,7 +360,7 @@ public class StatusView extends FrameLayout {
             setTipColor(R.id.sv_login_tip, viewHolder);
             setTipSize(R.id.sv_login_tip, viewHolder);
             setIcon(R.id.sv_login_icon, builder.getLoginIcon(), viewHolder);
-            setRetry(R.id.sv_login_retry, builder.isShowErrorRetry(), builder.getLoginRetryText(),
+            setRetry(R.id. , builder.isShowErrorRetry(), builder.getLoginRetryText(),
                     builder.getLoginRetryClickListener(), viewHolder);
         }
     }
