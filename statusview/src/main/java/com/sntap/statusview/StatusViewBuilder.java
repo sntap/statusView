@@ -146,6 +146,7 @@ public class StatusViewBuilder {
         this.tipSize = builder.tipSize;
         this.emptyIcon = builder.emptyIcon;
         this.errorIcon = builder.errorIcon;
+        this.loginIcon = builder.loginIcon;
         this.showEmptyRetry = builder.showEmptyRetry;
         this.showErrorRetry = builder.showErrorRetry;
         this.showLoginRetry = builder.showLoginRetry;
@@ -170,6 +171,7 @@ public class StatusViewBuilder {
 
         private int emptyIcon;
         private int errorIcon;
+        private int loginIcon;
 
         private boolean showEmptyRetry = true;
         private boolean showErrorRetry = true;
@@ -222,6 +224,12 @@ public class StatusViewBuilder {
             this.errorIcon = errorIcon;
             return this;
         }
+
+        public Builder setLoginIcon(int loginIcon) {
+            this.loginIcon = loginIcon;
+            return this;
+        }
+
 
         public Builder showEmptyRetry(boolean showEmptyRetry) {
             this.showEmptyRetry = showEmptyRetry;
