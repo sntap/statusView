@@ -74,7 +74,7 @@ public class MainActivity extends BaseActivity {
 
         statusView.showLoginView();
         statusView.setLoginTip("9999");
-        statusView.setLoginRetryTip("99929");
+        statusView.setLoginRetryTip("99929333");
 
 //        new Handler().postDelayed(new Runnable() {
 //            @Override
