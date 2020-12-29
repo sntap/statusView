@@ -48,6 +48,16 @@ public class StatusView extends FrameLayout {
     // 默认状态布局文件属性配置
     private StatusViewBuilder builder;
 
+    public enum StatusViewNow{
+        ContentView,
+        LoginView,
+        EmptyView,
+        LoadingView,
+        ErrorView
+    }
+
+    public StatusViewNow statusViewNow;
+
     public StatusView(@NonNull Context context) {
         this(context, null);
     }
@@ -165,6 +175,7 @@ public class StatusView extends FrameLayout {
      * 设置自定义 Empty 布局文件
      */
     public void setEmptyView(@LayoutRes int emptyLayoutRes) {
+//        statusViewNow = StatusViewNow.EmptyView;
         this.emptyLayoutId = emptyLayoutRes;
     }
 
@@ -172,6 +183,7 @@ public class StatusView extends FrameLayout {
      * 设置自定义 Error 布局文件
      */
     public void setErrorView(@LayoutRes int errorLayoutRes) {
+//        statusViewNow = StatusViewNow.ErrorView;
         this.errorLayoutId = errorLayoutRes;
     }
 
@@ -186,6 +198,7 @@ public class StatusView extends FrameLayout {
      * 显示 原始内容 布局
      */
     public void showContentView() {
+        statusViewNow = StatusViewNow.ContentView;
         switchStatusView(contentView);
     }
 
@@ -193,6 +206,7 @@ public class StatusView extends FrameLayout {
      * 显示 Loading 布局
      */
     public void showLoadingView() {
+        statusViewNow = StatusViewNow.LoadingView;
         switchStatusView(loadingLayoutId);
     }
 
@@ -200,6 +214,7 @@ public class StatusView extends FrameLayout {
      * 显示 Empty 布局
      */
     public void showEmptyView() {
+        statusViewNow = StatusViewNow.EmptyView;
         switchStatusView(emptyLayoutId);
     }
 
@@ -207,6 +222,8 @@ public class StatusView extends FrameLayout {
      * 显示 Error 布局
      */
     public void showErrorView() {
+
+        statusViewNow = StatusViewNow.ErrorView;
         switchStatusView(errorLayoutId);
     }
 
@@ -214,6 +231,8 @@ public class StatusView extends FrameLayout {
      * 显示 Login 布局
      */
     public void showLoginView() {
+
+        statusViewNow = StatusViewNow.LoginView;
         switchStatusView(loginLayoutId);
     }
 

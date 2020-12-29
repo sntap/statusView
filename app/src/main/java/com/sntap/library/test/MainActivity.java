@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Handler;
 import android.view.View;
 
+import com.sntap.library.test.base.BaseActivity;
 import com.sntap.statusview.StatusView;
 import com.sntap.statusview.StatusViewBuilder;
-import com.sntap.library.test.base.BaseActivity;
 
 import butterknife.OnClick;
 
@@ -75,6 +75,9 @@ public class MainActivity extends BaseActivity {
         statusView.showLoginView();
         statusView.setLoginTip("9999");
         statusView.setLoginRetryTip("99929333");
+        if(statusView.statusViewNow == StatusView.StatusViewNow.LoginView){
+            statusView.setLoginTip("Now");
+        }
 
 //        new Handler().postDelayed(new Runnable() {
 //            @Override
