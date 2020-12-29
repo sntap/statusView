@@ -191,7 +191,7 @@ public class StatusViewBuilder {
             return this;
         }
 
-        public Builder setEmptyip(String emptyTip) {
+        public Builder setEmptyTip(String emptyTip) {
             this.emptyTip = emptyTip;
             return this;
         }

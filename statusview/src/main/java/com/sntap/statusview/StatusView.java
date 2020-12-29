@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.sntap.library.R;
 
@@ -355,6 +356,7 @@ public class StatusView extends FrameLayout {
 
             setRetry(R.id.sv_error_retry, builder.isShowErrorRetry(), builder.getErrorRetryText(),
                     builder.getErrorRetryClickListener(), viewHolder);
+
         } else if (layoutId == R.layout.sv_login_layout) {
             setTip(R.id.sv_login_tip, builder.getLoginTip(), viewHolder);
             setTipColor(R.id.sv_login_tip, viewHolder);
@@ -363,6 +365,26 @@ public class StatusView extends FrameLayout {
             setRetry(R.id.sv_login_retry, builder.isShowLoginRetry(), builder.getLoginRetryText(),
                     builder.getLoginRetryClickListener(), viewHolder);
         }
+    }
+
+    public void setLoginTip(String tip){
+        TextView tvLoginTip = findViewById(R.id.sv_login_tip);
+        tvLoginTip.setText(tip);
+    }
+
+    public void setLoginRetryTip(String tip){
+        TextView tvLoginTip = findViewById(R.id.sv_login_retry);
+        tvLoginTip.setText(tip);
+    }
+
+    public void setEmptyTip(String tip){
+        TextView tvLoginTip = findViewById(R.id.sv_empty_tip);
+        tvLoginTip.setText(tip);
+    }
+
+    public void setEmptyRetryTip(String tip){
+        TextView tvLoginTip = findViewById(R.id.sv_empty_retry);
+        tvLoginTip.setText(tip);
     }
 
     private void setTip(int viewId, String tip, ViewHolder viewHolder) {

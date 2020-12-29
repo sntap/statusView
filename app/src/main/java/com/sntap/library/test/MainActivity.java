@@ -31,7 +31,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        statusView = StatusView.init(this, R.id.tv_start);
+        statusView = StatusView.init(this, R.id.ll_text);
         statusView.config(new StatusViewBuilder.Builder()
                 .setOnErrorRetryClickListener(new View.OnClickListener() {
                     @Override
@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity {
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                statusView.showEmptyView();
+                                statusView.showContentView();
                             }
                         }, 1500);
                     }
@@ -70,13 +70,21 @@ public class MainActivity extends BaseActivity {
                     }
                 }).build());
 
-        statusView.showLoadingView();
+//        statusView.showContentView();
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                statusView.showLoginView();
-            }
-        }, 1500);
+        statusView.showLoginView();
+        statusView.setLoginTip("9999");
+        statusView.setLoginRetryTip("99929");
+
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                }
+//                catch (Exception e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }, 1500);
     }
 }

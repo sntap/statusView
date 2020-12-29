@@ -8,21 +8,44 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="250dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:text="StatusView"
         android:textColor="#ffffff"
         android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_start"
+    <LinearLayout
+        android:id="@+id/ll_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="More Test"
-        android:textColor="#2c2c2c"
-        android:textSize="24sp" />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="More Test"
+            android:textColor="#2c2c2c"
+            android:textSize="24sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_start1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:text="More Test111"-->
+<!--            android:textColor="#2c2c2c"-->
+<!--            android:textSize="24sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_start2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:text="More Test222"-->
+<!--            android:textColor="#2c2c2c"-->
+<!--            android:textSize="24sp" />-->
+    </LinearLayout>
 
 </LinearLayout>
