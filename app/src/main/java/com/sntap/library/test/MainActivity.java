@@ -77,6 +77,7 @@ public class MainActivity extends BaseActivity {
         statusView.setLoginRetryTip("99929333");
         if(statusView.statusViewNow == StatusView.StatusViewNow.LoginView){
             statusView.setLoginTip("Now");
+            statusView.setBackgroudColor(R.color.colorAccent);
         }
 
 //        new Handler().postDelayed(new Runnable() {

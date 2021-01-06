@@ -160,6 +160,10 @@ public class StatusView extends FrameLayout {
         return statusView;
     }
 
+    public void setBackgroudColor(int color){
+        this.currentView.setBackgroundColor(color);
+    }
+
     private void setContentView(View contentView) {
         this.contentView = currentView = contentView;
     }
