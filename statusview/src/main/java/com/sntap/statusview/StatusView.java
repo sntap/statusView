@@ -406,6 +406,16 @@ public class StatusView extends FrameLayout {
         tvLoginTip.setText(tip);
     }
 
+    public void setErrorTip(String tip){
+        TextView tvErrorTip = findViewById(R.id.sv_error_tip);
+        tvErrorTip.setText(tip);
+    }
+
+    public void seErrorRetryTip(String tip){
+        TextView tvErrorRetryTip = findViewById(R.id.sv_error_retry);
+        tvErrorRetryTip.setText(tip);
+    }
+
     private void setTip(int viewId, String tip, ViewHolder viewHolder) {
         if (!TextUtils.isEmpty(tip))
             viewHolder.setText(viewId, tip);
